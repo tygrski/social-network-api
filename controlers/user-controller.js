@@ -46,7 +46,7 @@ const userController = {
         })
         .catch(err => res.status(400).json(err));
     },
-        // delete pizza -  DELETE /api/pizzas/:id
+        // delete User -  DELETE /api/users/:id
     deleteUser({ params }, res) {
         User.findOneAndDelete({ _id: params.id })
         .then(dbUserData => {
