@@ -1,3 +1,6 @@
+// Integrate API Routes into the Server
+//  import all of the API routes to prefix their endpoint names and package them up
+
 // require Express Router()
 const router = require("express").Router();
 
