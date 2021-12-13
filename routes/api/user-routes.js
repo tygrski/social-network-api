@@ -27,10 +27,10 @@ const {
         .put(updateUser)
         .delete(deleteUser);
 
-// endpoint for /api/users/friend (POST,DELETE)
-    router
-        .route('/:userId/friends/:friendId')
-        .post(addFriend)
-        .delete(deleteFriend);
+// // endpoint for /api/users/friend (POST,DELETE)
+//     router
+//         .route('/:userId/friends/:friendId')
+//         .post(addFriend)
+//         .delete(deleteFriend);
 
  module.exports = router;       
