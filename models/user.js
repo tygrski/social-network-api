@@ -36,7 +36,7 @@ const UserSchema = new Schema(
 }
 );
 
-// virtual to count the number of fronds in the array
+// virtual to count the number of frinds in the array
 UserSchema.virtual('friendCount').get(function(){
   return this.friends.length;
 });
