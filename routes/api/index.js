@@ -13,7 +13,7 @@ router.use("/users", userRoutes);
 
 
 //  /thoughts  endpint added to the created for routes for thought-routes.js
-// router.use("/thoughts", thoughtRoutes);
+router.use("/thoughts", thoughtRoutes);
 
 
 // export module Router

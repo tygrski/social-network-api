@@ -25,7 +25,7 @@ const {
         .route('/:id')
         .get(getUserById)
         .put(updateUser)
-        .delete(deleteUser);
+        .delete(deleteUser)
 
 // // endpoint for /api/users/friend (POST,DELETE)
 //     router
