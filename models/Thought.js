@@ -35,7 +35,7 @@ const reactionSchema = new Schema(
 
 const ThoughtSchema = new Schema({
 
-    thoughText: {
+    thoughtText: {
         type: String,
         required: true,
         minlength: 1,
@@ -55,7 +55,7 @@ const ThoughtSchema = new Schema({
     {
         toJSON: {
         virtuals: true,
-        getters: true
+        // getters: true
         },
         id: false,
     }

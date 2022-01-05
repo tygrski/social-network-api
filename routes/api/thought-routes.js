@@ -4,7 +4,7 @@ const {
     getAllThought,
     createThought,
     udpadeThought,
-    getThougtByID,
+    getThoughtByID,
     deleteThought,
     // createReation,
     // deleteReaction
@@ -23,7 +23,7 @@ router
 // endpoint for thougnt ids  /api/thoughtId(get, put , delete)
 router
     .route(':thoughtId')
-    .get(getThougtByID)
+    .get(getThoughtByID)
     .put(udpadeThought)
     .delete(deleteThought)
 

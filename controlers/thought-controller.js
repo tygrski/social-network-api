@@ -1,4 +1,5 @@
 const { User, Thought } = require("../models");
+const { db } = require("../models/User");
 
 const thoughtController = {
   // get all thought
@@ -12,11 +13,13 @@ const thoughtController = {
   },
   //  createThought api/thought
   createThought({ params, body }, res) {
+    console.log(params)
     Thought.create(body)
-      .then(({ _id }) => {
+      .then(({ id }) => {
+        
         return User.findOneAndUpdate(
-          { _id: params.userId },
-          { $push: { thoughts: _id } },
+          { id: params.userId },
+          { $push: { thoughts: id } },
           { new: true }
         );
       })
@@ -30,7 +33,7 @@ const thoughtController = {
       .catch((err) => res.status(400).json(err));
   },
   // udpadeThought api/thought
-  updateThought({ params, body }, res) {
+  udpadeThought({ params, body }, res) {
     Thought.findOneAndUpdate({ _id: params.thoughtid }, body, {
       new: true,
       runValidators: true,
@@ -46,7 +49,7 @@ const thoughtController = {
   },
 
   // getThoughtByID api/thought/:id
-  getThoughtById({ params }, res) {
+    getThoughtByID({ params }, res) {
     Thought.findOne({ _id: params.thoughtid })
     .then((dbThoughtData) => res.json(dbThoughtData))
     .catch((err) => {
@@ -54,6 +57,20 @@ const thoughtController = {
         res.status(400).json(err);
       });
   },
+
+  // deleteThought api/thought/:id
+  deleteThought({ params}, res) {
+    Thought.findByIdAndDelete({_id: params.thoughtid }, { new:true, runValidators: true })
+    .then(dbThoughtData => {
+      if(!dbThoughtData) {
+        res.status(404).json({ message: 'No user with this id '})
+        return;
+      }
+      res.json(dbThoughtData);
+    }) 
+    .catch(err => res.jaon(err))
+  }
+
 };
 
 module.exports = thoughtController;
