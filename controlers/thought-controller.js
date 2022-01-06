@@ -13,17 +13,21 @@ const thoughtController = {
   },
   //  createThought api/thought
   createThought({ params, body }, res) {
-    console.log(params)
+    
     Thought.create(body)
-      .then(({ id }) => {
-        
+      .then(( res ) => {
+        console.log("PARAMS",params)
+        console.log("ID",id)
+        console.log("RES", res)
         return User.findOneAndUpdate(
           { id: params.userId },
           { $push: { thoughts: id } },
           { new: true }
         );
+        
       })
       .then((dbThoughtData) => {
+        
         if (!dbThoughtData) {
           res.status(404).json({ message: "Need more thought info" });
           return;
