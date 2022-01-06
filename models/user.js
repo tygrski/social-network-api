@@ -1,5 +1,6 @@
 // import momgoose
 const { Schema, model } = require("mongoose");
+const { ThoughtSchema } = require("./Thought");
 
 // user schema
 const UserSchema = new Schema(
@@ -17,11 +18,8 @@ const UserSchema = new Schema(
       // validate or match
       match:  [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address'],
     },
-    thoughts: [{
-      // array id values referencing the Thought Model
-      type: Schema.Types.ObjectId,
-      ref: 'Thought'
-    }],
+    // subdocument
+    thoughts: [ThoughtSchema],
     friends: [{
       // Array of _id values referencing the User model (self-reference)
       type: Schema.Types.ObjectId,
