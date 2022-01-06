@@ -13,15 +13,13 @@ const thoughtController = {
   },
   //  createThought api/thought
   createThought({ params, body }, res) {
-    
+    console.log("RES", res)
     Thought.create(body)
       .then(( res ) => {
         console.log("PARAMS",params)
-        console.log("ID",id)
-        console.log("RES", res)
         return User.findOneAndUpdate(
           { id: params.userId },
-          { $push: { thoughts: id } },
+          { $push: { thoughts: res._id } },
           { new: true }
         );
         
