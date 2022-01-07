@@ -1,6 +1,6 @@
 ### Social Network API designed to create a user, thoughts and reactions
 
-## Instructions: run npm start in the terminal. 
+## Instructions:
 
 ## Made with Mongoose, Express 
 
@@ -34,19 +34,20 @@ Our application was curated for beer connoisseurs and casual beer enthusiasts al
 
 ## Setup
 
-[Deployed to Heroku](https://beer-belly.herokuapp.com/)
 
-[GitHub Repository](https://github.com/ggamb/Beer-belly-developers-project-2)
+[GitHub Repository](https://github.com/tygrski/social-network-api)
 
 ## Installation
 
-To install this code, run `npm install` to install all dependencies. To connect to the sequelize database, ensure that the .env file in the root of your directory contains the correct "DB_NAME", "DB_USER", and "DB_PW". Then, open the mySQL terminal and sign in with your username and password. In the mySQL terminal run `source db/schema.sql;` and then `quit;`. Then run `npm start` to start the server. Navigate to localhost:3001 in your browser to use the webpage!
+ Clone the above GitHub repo
 
-If you are having trouble commenting on a bar page, you may need to run `npm i -D handlebars@4.5.0` in your terminal to install version 4.5.0 of handlebars as a devDependency.
+To install this code, run `npm install` to install all dependencies. Navigate to localhost:3001 in your browser to use the webpage!
+
+If you are cloning this repo, add a .gitignore file to the root of this folder and add the words:  node_modules 
 
 ## Features
 
-On this application, a user can create an profile and log in. The user can use the search bar on the landing page to search for an American brewery, cidery, brewpub, or bottleshop by city or zipcode. Leveraging the OpenBreweryDB API, the page will load with bars and associated data for the location the user entered. If the user clicks on the name of a brewery, the user is brought to the bar's page where a logged in user can post comments and engage with other users.
+On this application, you can create a user , add thoughts, frineds and reactions. The user/s can be searched by all or id, edited and deleted with  with CRUD functions. Thougts can be created and searched by add or id with the Create and Read functions. Friends can be added or deleted with Create and Delete functions.
 
 ## License
 
