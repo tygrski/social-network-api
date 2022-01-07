@@ -25,7 +25,7 @@ Clone the above GitHub repo
 
 ## Installation
 
-To install this code, run `npm install` to install all dependencies. Navigate to localhost:3001 in your REST client app ! 
+To install this code, run `npm install` in the terminal of your IDE to install all dependencies. Navigate to localhost:3001 in your REST client app ! 
 
 If you are cloning this repo, add a .gitignore file to the root of this folder and add the words:  node_modules 
 
