@@ -28,21 +28,7 @@ const thoughtController = {
       })
       .catch((err) => res.status(400).json(err));
   },
-  // udpadeThought api/thought
-  udpadeThought({ params, body }, res) {
-    Thought.findOneAndUpdate({ _id: params.thoughtid }, body, {
-      new: true,
-      runValidators: true,
-    })
-      .then((dbThoughtData) => {
-        if (!dbThoughtData) {
-          res.status(404).json({ message: "No Thought found with this id!" });
-          return;
-        }
-        res.json(dbThoughtData);
-      })
-      .catch((err) => res.status(400).json(err));
-  },
+  
 
   // getThoughtByID api/thought/:id
   getThoughtByID({ params }, res) {
@@ -52,23 +38,7 @@ const thoughtController = {
         console.log(err);
         res.status(400).json(err);
       });
-  },
-
-  // deleteThought api/thought/:id
-  deleteThought({ params }, res) {
-    Thought.findByIdAndDelete(
-      { _id: params.thoughtid },
-      { new: true, runValidators: true }
-    )
-      .then((dbThoughtData) => {
-        if (!dbThoughtData) {
-          res.status(404).json({ message: "No user with this id " });
-          return;
-        }
-        res.json(dbThoughtData);
-      })
-      .catch((err) => res.jaon(err));
-  },
+  }
 };
 
 module.exports = thoughtController;
