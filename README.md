@@ -1,13 +1,5 @@
 ### Social Network API designed to create a user, thoughts and reactions
 
-## Instructions:
-
-## Made with Mongoose, Express 
-
-### Created by Travis Tybor
-
-# Beer-belly-developers-project-2
-
 ## Table of Contents
 
 * [Description](#description)
@@ -20,13 +12,7 @@
 
 ## Description
 
-A crowd-sourced local tavern or pub review site.
-
-The application has pages devoted to individual tavern locations where dedicated users can submit a review and rate your local pub!
-
-This application is also powered by OpenBreweryDB API which is a free dataset and API with public information on breweries, cideries, brewpubs, and bottleshops.
-
-Our application was curated for beer connoisseurs and casual beer enthusiasts alike.
+On this backend application, you can create a user , add thoughts, frineds and reactions.
 
 ## Screenshot
 
@@ -47,7 +33,12 @@ If you are cloning this repo, add a .gitignore file to the root of this folder a
 
 ## Features
 
-On this application, you can create a user , add thoughts, frineds and reactions. The user/s can be searched by all or id, edited and deleted with  with CRUD functions. Thougts can be created and searched by add or id with the Create and Read functions. Friends can be added or deleted with Create and Delete functions.
+ The user/s can be searched by all or id, edited and deleted with  with CRUD functions. Thougts can be created and searched by add or id with the Create and Read functions. Friends can be added or deleted with Create and Delete functions.
+ <br/>
+ <br/>
+ Made with:<br/>
+ ✅ Mongoose<br/>
+ ✅ Express JS
 
 ## License
 
