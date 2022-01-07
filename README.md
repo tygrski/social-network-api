@@ -59,4 +59,4 @@ This project is licensed under the MIT License. For the full license see this [l
 ## Contributing
 
 
-[Travis T](https://github.com/tygrski)
+[Travis Tybor](https://github.com/tygrski)
