@@ -4,8 +4,8 @@ const { db } = require("../models/User");
 
 const thoughtController = {
   // get all thought
-  getAllThought(res, req) {
-    Thought.find({})
+  getAllThought(req, res) {
+    Thought.find()
       .then((dbThoughtData) => res.json(dbThoughtData))
       .catch((err) => {
         console.log(err);
@@ -14,11 +14,11 @@ const thoughtController = {
   },
   //  createThought api/thought
   createThought({ params, body }, res) {
-         User.findOneAndUpdate(
-          { _id: params.id },
-          { $addToSet: { thoughts: body } },
-          { runValidators: true, new: true }
-        )
+    User.findOneAndUpdate(
+      { _id: params.id },
+      { $addToSet: { thoughts: body } },
+      { runValidators: true, new: true }
+    )
       .then((dbThoughtData) => {
         if (!dbThoughtData) {
           res.status(404).json({ message: "Need more thought info" });
