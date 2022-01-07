@@ -1,4 +1,4 @@
-### Social Network API designed to create a user, thoughts and reactions
+### Social Network API 
 
 ## Table of Contents
 
