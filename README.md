@@ -15,13 +15,13 @@
 On this backend application, you can create a user , add thoughts, frineds and reactions.
 
 ## Screenshot
-
-
+![social-network-api](https://user-images.githubusercontent.com/77369211/148496843-973868f4-4300-4a0b-8483-0c22c5502194.jpg)
 
 ## Setup
 
-
 [GitHub Repository](https://github.com/tygrski/social-network-api)
+
+Clone the above GitHub repo
 
 ## Installation
 
