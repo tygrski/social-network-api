@@ -27,7 +27,7 @@ Clone the above GitHub repo
 
  Clone the above GitHub repo
 
-To install this code, run `npm install` to install all dependencies. Navigate to localhost:3001 in your browser to use the webpage!
+To install this code, run `npm install` to install all dependencies. Navigate to localhost:3001 in your REST client app ! 
 
 If you are cloning this repo, add a .gitignore file to the root of this folder and add the words:  node_modules 
 
