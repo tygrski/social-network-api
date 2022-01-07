@@ -31,7 +31,7 @@ If you are cloning this repo, add a .gitignore file to the root of this folder a
 
 ## Features
 
- The user/s can be searched by all or assigned id, edited and deleted with  with CRUD functions. Thoughts can be created and searched by all or by assigned id with the Create and Read functions. Friends can be added or deleted by assigned id with Create and Delete functions.
+ The user/s can be created, searched by all or assigned id, edited and deleted with with CRUD functions. Thoughts can be created and searched by all or by assigned id with the Create and Read functions. Friends can be added or deleted by assigned id with Create and Delete functions.
  <br/>
  <br/>
  Made with:<br/>
