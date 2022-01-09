@@ -48,8 +48,10 @@ const thoughtController = {
 
   // getThoughtByID api/thought/:id
   getThoughtByID({ params }, res) {
-    Thought.findOne({ _id: params.id })
+    console.log("Params", params)
+    Thought.findOne({ _id: params.thoughtid })
       .then((dbThoughtData) => {
+        console.log("ThoughtData", dbThoughtData)
         // if no ID , send 404
         if (!dbThoughtData) {
           res.status(404).json(" No Thought found with this ID");

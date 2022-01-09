@@ -22,7 +22,7 @@ router
 
 // endpoint for thougnt ids  /api/thoughtId(get, put , delete)
 router
-    .route(':thoughtId')
+    .route('/:thoughtId')
     .get(getThoughtByID)
     .put(udpadeThought)
     .delete(deleteThought)
