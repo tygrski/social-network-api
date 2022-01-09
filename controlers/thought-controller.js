@@ -32,7 +32,7 @@ const thoughtController = {
 
   // udpadeThought api/thought
   udpadeThought({ params, body }, res) {
-    Thought.findOneAndUpdate({ _id: params.thoughtid }, body, {
+    Thought.findOneAndUpdate({ _id: params.thoughtId }, body, {
       new: true,
       runValidators: true,
     })
@@ -49,7 +49,7 @@ const thoughtController = {
   // getThoughtByID api/thought/:id
   getThoughtByID({ params }, res) {
     console.log("Params", params)
-    Thought.findOne({ _id: params.thoughtid })
+    Thought.findOne({ _id: params.thoughtId })
       .then((dbThoughtData) => {
         console.log("ThoughtData", dbThoughtData)
         // if no ID , send 404
